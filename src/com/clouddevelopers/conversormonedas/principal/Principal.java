@@ -1,45 +1,25 @@
 package com.clouddevelopers.conversormonedas.principal;
-
 import com.clouddevelopers.conversormonedas.modelos.ConsultaTasa;
-import com.clouddevelopers.conversormonedas.modelos.ConversionRates;
 import com.clouddevelopers.conversormonedas.modelos.TasaCambio;
-
 import java.util.Scanner;
 
 public class Principal {
-
     public static void main(String[] args) {
-
         Scanner teclado = new Scanner(System.in);
         ConsultaTasa consultaTasa = new ConsultaTasa();
-
         TasaCambio tasaCambio = consultaTasa.tasaCambio();
-
         String menu =
-
                 """
-                   \s
                     Sea bienvenido/a al Conversor de Moneda =)
-                   \s
                     1) Dolar =>> Peso argentino
-                   \s
                     2) Peso argentino =>> Dolar
-                   \s
                     3) Dolar =>> Real brasileño
-                   \s
                     4) Real brasileño =>> Dolar
-                   \s
-                    5) Dolar =>> Peso colombianO
-                   \s
+                    5) Dolar =>> Peso colombian
                     6) Peso colombiano =>> Dolar
-                   \s
                     7) Salir
-                   \s
                     Elija una opción válida
-                   \s
                     ***********************************************
-                   \s
-
                 """;
 
         while (true) {
