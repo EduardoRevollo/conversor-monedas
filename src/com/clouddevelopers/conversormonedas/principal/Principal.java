@@ -1,5 +1,5 @@
 package com.clouddevelopers.conversormonedas.principal;
-import com.clouddevelopers.conversormonedas.modelos.ConsultaTasa;
+import com.clouddevelopers.conversormonedas.servicios.ConsultaTasa;
 import com.clouddevelopers.conversormonedas.modelos.TasaCambio;
 import java.util.Scanner;
 
@@ -25,9 +25,16 @@ public class Principal {
         while (true) {
             System.out.println(menu);
             int opcion = teclado.nextInt();
-            System.out.println("Ingrese el valor que deseas convertir");
-            double valor = teclado.nextDouble();
-            double tasa = 0.0;
+            double valor;
+            double tasa;
+
+            if (opcion == 7) {
+                System.out.println("Saliendo del programa");
+                break;
+            } else {
+                System.out.println("Ingrese el valor que deseas convertir");
+                valor = teclado.nextDouble();
+            }
 
             if (opcion == 1) {
                 tasa = tasaCambio.conversion_rates().ARS();
@@ -58,12 +65,6 @@ public class Principal {
                 tasa = tasaCambio.conversion_rates().COP();
                 System.out.println("El valor "+valor+"[COP] corresponde al valor final de =>> "+ valor/tasa+ " [USD]");
             }
-
-            if (opcion == 7) {
-                System.out.println("Saliendo del programa");
-                break;
-            }
-
 
 
         }

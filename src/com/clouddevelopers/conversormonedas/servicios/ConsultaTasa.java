@@ -1,6 +1,7 @@
-package com.clouddevelopers.conversormonedas.modelos;
+package com.clouddevelopers.conversormonedas.servicios;
 
 
+import com.clouddevelopers.conversormonedas.modelos.TasaCambio;
 import com.google.gson.Gson;
 
 import java.io.IOException;
